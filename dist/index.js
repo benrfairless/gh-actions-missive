@@ -29221,7 +29221,7 @@ function wrappy (fn, cb) {
 const core = __nccwpck_require__(7484);
 const github = __nccwpck_require__(3228);
 
-const MISSIVE_LINK_PATTERN = /https:\/\/mail\.missiveapp\.com\/#[^\s]+\/conversations\/[a-zA-Z0-9-]+/g;
+const MISSIVE_LINK_PATTERN = /https:\/\/mail\.missiveapp\.com\/#[^\s]+\/conversations\/[a-zA-Z0-9-]+/;
 
 function containsMissiveLink(text) {
   if (!text) return false;

@@ -1,4 +1,4 @@
-const { containsMissiveLink, MISSIVE_LINK_PATTERN } = require('../src/index');
+const { containsMissiveLink } = require('../src/index');
 
 jest.mock('@actions/core', () => ({
   getInput: jest.fn(),
@@ -15,10 +15,6 @@ jest.mock('@actions/github', () => ({
 
 describe('Missive Link Detection', () => {
   describe('containsMissiveLink', () => {
-    beforeEach(() => {
-      MISSIVE_LINK_PATTERN.lastIndex = 0;
-    });
-
     test('should detect a valid Missive conversation link', () => {
       const comment = 'Missive conversation: https://mail.missiveapp.com/#inbox/conversations/1abc23-be16-b987-a123-cab31756ee47';
       expect(containsMissiveLink(comment)).toBe(true);
