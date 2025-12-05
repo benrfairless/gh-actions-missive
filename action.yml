@@ -1,0 +1,17 @@
+name: 'Missive Conversation Tagger'
+description: 'Automatically tags issues and PRs with a customizable label when a Missive conversation link is found in comments'
+author: 'Ben Fairless'
+branding:
+  icon: 'tag'
+  color: 'blue'
+inputs:
+  label:
+    description: 'The label to apply when a Missive conversation is linked'
+    required: false
+    default: 'missive-linked'
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
